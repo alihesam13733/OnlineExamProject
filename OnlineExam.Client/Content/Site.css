@@ -1,0 +1,69 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+.font-40 {
+    font-size: 40px;
+}
+.bold {
+    font-weight: bolder;  
+}
+
+ul.nav.navbar-nav li a {
+    color: white;
+    font-weight: bold;
+}
+
+/*when focus in textbox jump placeholder  on border */
+/*div { 
+  position: relative; 
+  padding-top: 10px;  
+}
+.inputText {
+  font-size: 14px;
+  width: 200px;
+  height: 25px;
+}
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 18px;
+  transition: 0.2s ease all;
+}
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -6px;
+}*/
+
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}

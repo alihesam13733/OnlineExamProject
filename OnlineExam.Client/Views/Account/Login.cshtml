@@ -1,0 +1,51 @@
+﻿@using OnlineExam.Client.Properties
+@model OnlineExam.Models.Accounting.Login
+@{
+    ViewBag.Title = "ورود";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-success">ورود </h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-4  col-md-offset-4">
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "" })
+                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control ltr", @placeholder = "جهت ورود به سایت (انگلیسی)" } })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "" })
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control ltr", @placeholder = @Html.DisplayNameFor(x => x.Password) } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+          
+
+           
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.ActionLink("اگر قبلا ثبت نام نکرده اید اینجارا کلیک کنید", "Registration", "Account", null, new { })
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary dark-blue"> @WebResource.Send</button>
+
+        </div>
+    </div>
+}
+
+
+
+
+
+

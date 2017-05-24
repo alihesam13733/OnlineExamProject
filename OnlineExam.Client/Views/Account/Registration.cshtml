@@ -1,0 +1,60 @@
+﻿@using OnlineExam.Client.Properties
+@model OnlineExam.Models.Accounting.Registration
+
+@{
+    ViewBag.Title = "ثبت نام";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-success">ثبت نام</h2>
+    
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-md-4  col-md-offset-4">
+
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "" })
+                        @Html.EditorFor(model => model.UserName, new {htmlAttributes = new {@class = "form-control ltr", @placeholder ="جهت ورود به سایت (انگلیسی)"}})
+                        @Html.ValidationMessageFor(model => model.UserName, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "" })
+                        @Html.EditorFor(model => model.Email, new {htmlAttributes = new {@class = "form-control ltr", @placeholder = @Html.DisplayNameFor(x => x.Email)}})
+                        @Html.ValidationMessageFor(model => model.Email, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "" })
+                        @Html.EditorFor(model => model.Password, new {htmlAttributes = new {@class = "form-control ltr", @placeholder = @Html.DisplayNameFor(x => x.Password)}})
+                        @Html.ValidationMessageFor(model => model.Password, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "" })
+                        @Html.EditorFor(model => model.ConfirmPassword, new {htmlAttributes = new {@class = "form-control ltr", @placeholder = @Html.DisplayNameFor(x => x.ConfirmPassword)}})
+                        @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.ActionLink("اگر قبلا ثبتنام کردید از اینجا وارد شوید", "Login","Account",null,new {})
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary dark-blue"> @WebResource.Send</button>
+
+            </div>
+        </div>
+    }
+    
+
