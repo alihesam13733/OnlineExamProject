@@ -17,5 +17,6 @@ namespace OnlineExam.DomainClasses.Entities
         public string Subject { get; set; }
 
         #endregion Properties
+
     }
 }
