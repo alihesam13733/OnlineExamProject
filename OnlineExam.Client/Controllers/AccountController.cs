@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using OnlineExam.Models.Accounting;
 using OnlineExam.ServiceLayer.Interfaces;
+using OnlineExam.Utilities;
+using OnlineExam.Utilities.PersianCaptcha;
 using OnlineExam.ViewModels.Accounting;
 
 namespace OnlineExam.Client.Controllers
@@ -144,6 +147,7 @@ namespace OnlineExam.Client.Controllers
 
         }
 
+        [NoBrowserCache]
         public ActionResult Login()
         {
             try
@@ -163,11 +167,13 @@ namespace OnlineExam.Client.Controllers
 
         }
 
-        [HttpPost]
+        [HttpPost, ValidateCaptchaAttribute, ValidateAntiForgeryToken]
         public ActionResult Login(Login login)
         {
             try
             {
+                if (!ModelState.IsValid) return View();
+              
                 UserViewModel userViewModel = new UserViewModel();
                 // ViewBag.Degrees = _degreeService.GetAllDegrees();
                 // ViewBag.Genders = _genderService.GetAllGenders();
@@ -182,5 +188,7 @@ namespace OnlineExam.Client.Controllers
             }
 
         }
+
+        
     }
 }

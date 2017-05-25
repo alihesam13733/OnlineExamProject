@@ -79,6 +79,15 @@ namespace OnlineExam.Models {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to کدامنیتی(به عدد).
+        /// </summary>
+        public static string DisplayCaptchaInputText {
+            get {
+                return ResourceManager.GetString("DisplayCaptchaInputText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ایمیل.
         /// </summary>
         public static string DisplayEmail {
@@ -111,6 +120,15 @@ namespace OnlineExam.Models {
         public static string DisplayUserName {
             get {
                 return ResourceManager.GetString("DisplayUserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to لطفا کد امنیتی را وارد کنید.
+        /// </summary>
+        public static string RequiredCaptchaInputText {
+            get {
+                return ResourceManager.GetString("RequiredCaptchaInputText", resourceCulture);
             }
         }
         

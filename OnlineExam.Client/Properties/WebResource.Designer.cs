@@ -61,6 +61,15 @@ namespace OnlineExam.Client.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to آیا کلمه عبور خود را فراموش کرده اید؟.
+        /// </summary>
+        public static string AreYouForgetPassword {
+            get {
+                return ResourceManager.GetString("AreYouForgetPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ثبت نام.
         /// </summary>
         public static string Registration {

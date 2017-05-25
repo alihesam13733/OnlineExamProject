@@ -172,6 +172,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\Common.js" />
     <Content Include="Scripts\jquery-2.2.1.js" />
     <Content Include="Scripts\jquery-2.2.1.min.js" />
     <Content Include="Scripts\jquery-2.2.1.min.map" />
@@ -239,6 +240,10 @@
     <ProjectReference Include="..\OnlineExam.ServiceLayer\OnlineExam.ServiceLayer.csproj">
       <Project>{cf52f324-e35e-4f96-92c0-7c29f02e4636}</Project>
       <Name>OnlineExam.ServiceLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineExam.Utilities\OnlineExam.Utilities.csproj">
+      <Project>{DFE37B22-2DD6-4EBD-BE83-514DE17172E8}</Project>
+      <Name>OnlineExam.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="..\OnlineExam.ViewModels\OnlineExam.Models.csproj">
       <Project>{3b7c768f-915d-44ca-9928-56f26e736456}</Project>

@@ -144,4 +144,10 @@
   <data name="RequiredUserName" xml:space="preserve">
     <value>نام کاربری را وارد کنید</value>
   </data>
+  <data name="DisplayCaptchaInputText" xml:space="preserve">
+    <value>کدامنیتی(به عدد)</value>
+  </data>
+  <data name="RequiredCaptchaInputText" xml:space="preserve">
+    <value>لطفا کد امنیتی را وارد کنید</value>
+  </data>
 </root>

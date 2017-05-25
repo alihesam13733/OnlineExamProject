@@ -67,3 +67,54 @@ input:not(:focus):valid ~ .floating-label {
 .rtl {
     direction: rtl;
 }
+
+.paddin-right-10 {
+    padding-right: 10px;
+}
+.paddin-right-20 {
+    padding-right: 20px;
+}
+.paddin-bottom-10 {
+    padding-bottom: 10px;
+}
+.paddin-bottom-20 {
+    padding-bottom: 20px;
+}
+.paddin-top-10 {
+    padding-top: 10px;
+}
+.paddin-top-20 {
+    padding-top: 20px;
+}
+.margin-top-10 {
+    margin-top: 10px;
+}
+.margin-top-20 {
+    margin-top: 20px;
+}
+.margin-top-30 {
+    margin-top: 30px;
+}
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+input[type="text"]:-ms-input-placeholder {
+    text-align: right;
+}
+input[type="text"]::-webkit-input-placeholder {
+    text-align: right;
+}
+input::-moz-placeholder {
+ text-align: right;
+}
+label {
+    padding: 5px;
+    background-color: white;
+    margin-right: 10px;
+}
